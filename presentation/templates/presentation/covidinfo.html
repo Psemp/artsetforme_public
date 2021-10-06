@@ -1,0 +1,50 @@
+{% extends 'presentation/base.html' %}
+
+{% block content %}
+{% load static %}
+{% if title %}
+    <head>
+        <title>{{ title }}</title>
+    </head>
+{% else %}
+    <head>
+        <title>L'Atelier Arts et Forme</title>
+    </head>
+{% endif %}
+<section class="presentation-section">
+    <div class="row justify-content-center">
+        <div class="col-md-8 bg-light rounded pers-justified">
+            <br>
+            <u><h2>Informations liées au COVID-19 à l'Atelier Arts & Forme</h2></u>
+            <p>
+            Toutes les précautions sanitaires sont respectées pour que notre rentrée se passe dans les meilleures conditions 
+            possibles.
+            <br>
+            Pour suivre les instructions gouvernementales, <strong>le pass sanitaire vous sera demandé à chacun de vos cours.</strong> 
+            Tous les professeurs de l’Atelier sont habilités à vérifier votre pass.
+            <br>
+            Le port du masque est <strong>obligatoire</strong> pour entrer et sortir de l’école.
+            Sauf pour les petits, les parents sont invités à déposer les enfants à la porte d’entrée. 
+            Exceptionnellement, la sortie des cours se fera par la porte fenêtre de la salle de danse.
+            <br>
+            <hr>
+            Je renseignerai les parents et toute personne désirant des informations par la fenêtre de mon bureau.
+            Merci de prévoir votre tapis personnel (gym, yoga, pilâtes, danse), votre bouteille d’eau ; D’arriver pour les cours en tenue. 
+            avec votre sac fermé, chaussons ou baskets à l’intérieur. 
+            Les vestiaires étant condamnés, nous mettons à votre disposition des casiers pour y ranger votre sac.
+            Vous trouverez du gel hydro alcoolique sur le bar, le frigidaire, dans la salle de danse, ainsi qu’aux toilettes.
+            <br>
+            Les places dans la salle seront limitées du fait de la distanciation sociale, ainsi, merci de confirmer 
+            au plus vite votre inscription, présence et éventuel désistement.
+            Toute l’équipe de l’Atelier Arts et Forme se tient à votre disposition pour répondre à toute question que vous 
+            pourriez avoir en ces temps difficiles.
+            <br>
+            Nous avons hâte de vous retrouver.
+            <br>
+            <hr>
+            <u>Merci de votre comprehension en ces temps difficiles.</u>
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock content%}

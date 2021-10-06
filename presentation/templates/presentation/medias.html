@@ -1,0 +1,31 @@
+{% extends 'presentation/base.html' %}
+
+{% block content %}
+{% load static %}
+{% if title %}
+    <head>
+        <title>{{ title }}</title>
+    </head>
+{% else %}
+    <head>
+        <title>L'Atelier Arts et Forme</title>
+    </head>
+{% endif %}
+<section class="contact-section min-vh-100 bg-black">
+    <div class="container px-4 px-lg-5">
+        <div class='row mt-4 justify-content-center'>
+            <div class="card col-md-8 mb-lg-4">
+                <div class="card-body">
+                    <h5 class="card-title">Medias</h5>
+                    <p class="card-text pers-justified">
+                        Bonjour ! Le contenu de cette page sera mis à jour au fur et à mesure.
+                        Si vous ou votre enfant etes membre de l'Atelier et que vous avez signé 
+                        et accepté la section de notre reglement concernant le droit à l'image et que vous ne souhaitez
+                         plus figurer sur cette page, n'hésitez pas à nous contacter.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>    
+</section>
+{% endblock content%}

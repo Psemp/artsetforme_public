@@ -1,0 +1,36 @@
+{% extends 'presentation/base.html' %}
+
+{% block content %}
+{% load static %}
+{% if title %}
+    <head>
+        <title>{{ title }}</title>
+    </head>
+{% else %}
+    <head>
+        <title>L'Atelier Arts et Forme</title>
+    </head>
+{% endif %}
+<section class="presentation-section ">
+    <div class="container px-4 px-lg-5">
+        <div class='row mt-4 justify-content-center'>
+            <div class="col-md-8 bg-light pers-justified rounded">
+                <p><h3>Vous trouverez ci dessous tous les documments utiles de l'Atelier</h3>
+                N'hésitez pas à nous contacte pour toute information supplementaire !
+                </p>
+        </div>
+            {% for item in download_links %}
+                <div class="card col-md-8 mb-lg-4">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ item.name }}</h5>
+                        <p class="card-text pers-justified">
+                            {{ item.short_description}}
+                            <a href={{item.file.url}} target="_blank">Cliquez ici pour télécharger le fichier lié.</a>
+                        </p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>    
+</section>
+{% endblock content%}

@@ -1,0 +1,26 @@
+sudo: required
+
+language: python
+
+python:
+  - '3.9'
+
+before_script:
+  - pip install -r requirements.txt
+#  - wget https://chromedriver.storage.googleapis.com/91.0.4472.101/chromedriver_linux64.zip
+#  - unzip chromedriver_linux64.zip -d /home/travis/virtualenv/python3.9.1/bin/
+#  - export CHROME_BIN=chromium-browser
+  
+# if selenium tests, run tests in headless
+
+branches:
+  only:
+    - staging
+
+env: DJANGO_SETTINGS_MODULE="artsetforme.settings.travis"
+
+services:
+  - postresql
+
+script:
+  - python manage.py test

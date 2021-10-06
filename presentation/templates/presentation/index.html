@@ -1,0 +1,153 @@
+{% extends 'presentation/base.html' %}
+
+{% block content %}
+{% load static %}
+{% if title %}
+    <head>
+        <title>{{ title }}</title>
+    </head>
+{% else %}
+    <head>
+        <title>L'Atelier Arts et Forme</title>
+    </head>
+{% endif %}
+<!-- Masthead-->
+<header class="masthead">
+    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <div class="d-flex justify-content-center">
+            <div class="text-center">
+                <h1 class="mx-auto my-0 text-uppercase">Arts et Forme</h1>
+                <h2 class="text-white-50 mx-auto mt-2 mb-5">Ecole de danse et salle de sport à Peypin.</h2>
+                <a class="btn btn-primary" href="#about">En Savoir Plus.</a>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- About-->
+<section class="about-section text-center" id="about">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8">
+                <h2 class="text-white mb-4">Arts et forme en quelques mots :</h2>
+                <p class="text-white-50">
+                    Texte ici
+                </p>
+            </div>
+        </div>
+        <img class="img-fluid" src="{% static 'assets/img/nadine.png' %}" alt="..." />
+    </div>
+</section>
+<!-- Activities -->
+<section class="projects-section bg-light" id="projects">
+    <div class="container px-4 px-lg-5">
+        <!-- Activities One Row-->
+        <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+            <div class="col-lg-6"><img class="img-fluid" src="{% static 'assets/img/ragga_hiphop.jpg' %}" alt="..." /></div>
+            <div class="col-lg-6">
+                <div class="bg-black text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                            <h4 class="text-white">Ragga Hip hop</h4>
+                            <p class="mb-0 center-justified text-white-50">
+                                Le ragga dancehall, raggamuffin, est la variante la plus populaire du dancehall en Jamaïque actuellement. Il s'agit de deejays posant sur des rythmes agressifs, c'est-à-dire plus rapides que le reggae. Fusionné au hip hop chez Arts et Forme vous pourrez :
+                                
+                                <br>
+                                - Bouger sur des rythmes afros, latinos, américains
+                                <br>
+                                - Apprendre et gérer les mouvements articulaires.
+                                <br>
+                                 - Maîtriser les isolations du corps. 
+                                 <br> 
+                                - Jouer avec les styles.
+                                <br>
+                                - Révéler votre personnalité.</p>
+                            <hr class="d-none d-lg-block mb-0 ms-0" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Activities Two Row-->
+        <div class="row gx-0 justify-content-center">
+            <div class="col-lg-6"><img class="img-fluid" src="{% static 'assets/img/classique.jpg' %}" alt="..." /></div>
+            <div class="col-lg-6 order-lg-first">
+                <div class="bg-black text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-right">
+                            <h4 class="text-white">Danse Classique</h4>
+                            <p class="mb-0 center-justified text-white-50">La danse classique est rigoureuse et formatrice. 
+                                Elle est fortement conseillée à tous les danseurs, qu’ils se dirigent vers une carrière classique ou autre. 
+                                La danse classique est le B.A.BA de la danse, comme le solfège pour la musique. 
+                                Même si le véritable apprentissage est conseillé à partir de 8 ans, nos plus jeunes « petits » 
+                                rats s’ouvrent très tôt à la grâce et à la musique classique.</p>
+                            <hr class="d-none d-lg-block mb-0 me-0" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Activities One Row-->
+        <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+            <div class="col-lg-6"><img class="img-fluid" src="{% static 'assets/img/jazz.jpg' %}" alt="..." /></div>
+            <div class="col-lg-6">
+                <div class="bg-black text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                            <h4 class="text-white">Jazz</h4>
+                            <p class="mb-0 center-justified text-white-50">
+                                Cette discipline est un mélange de danse classique, de danse contemporaine et d’expression corporelle. 
+                                C’est une danse ou toutes les parties du corps entrent en jeu, les hanches, la poitrine, le ventre, 
+                                « travaillent » tout autant que les jambes. Ces cours me laissent une totale liberté pour la création 
+                                chorégraphique, sans pour autant, oublier la technique et les « phrases » de la danse. 
+                                De là, à partir sur les comédies musicales et le cabaret...il n’y a qu’un pas ! 
+                                Mes cours de jazz s’adressent aux enfants dés 6 ans, jusqu’aux adultes.</p>
+                            <hr class="d-none d-lg-block mb-0 ms-0" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Activities Two Row-->
+        <div class="row gx-0 justify-content-center">
+            <div class="col-lg-6"><img class="img-fluid" src="{% static 'assets/img/zumba.jpg' %}" alt="..." /></div>
+            <div class="col-lg-6 order-lg-first">
+                <div class="bg-black text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-right">
+                            <h4 class="text-white">Zumba & Zumba Kids</h4>
+                            <p class="mb-0 center-justified text-white-50"><strong>La Zumba</strong> est un Programme d’entrainement Physique complet alliant la Remise en Forme (Cario et Préparation Musculaire) et Chorégraphies de Tous Styles.
+                                l’essayer c’est L’ ADOPTER !
+                                La<strong> Zumba kids</strong> est une Activité Physique comportant des mouvements adaptés aux enfants et Basés sur les chorégraphies  Zumba.
+                                Le Cours est Composé de Danse, de Jeux et des Clés essentiel aux développements de l’enfant, comme l’estime de Soi, La Mémoire et la Créativité.
+                                C’est simple…. les jeunes Danseurs Adorent.
+                                </p>
+                            <hr class="d-none d-lg-block mb-0 me-0" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+            <div class="col-lg-6"><img class="img-fluid" src="{% static 'assets/img/jazz.jpg' %}" alt="..." /></div>
+            <div class="col-lg-6">
+                <div class="bg-black text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                            <h4 class="text-white">Shuffle</h4>
+                            <p class="mb-0 center-justified text-white-50">
+                                Le Shuffle est un mix de Danse d’Afro-Américains venant des Plantations et de Claquettes.
+                                C’est donc une Succession de Pas sur Jambes Fléchies tout cela sur une Musique Pep’s.
+                                ont y travaille le Cardio, le Renforcement des Muscles des Jambes et la Tenue du Corps.
+                                Le Shuffle Envahi les Salles de Danse et on Adore ça..!
+
+                            </p>
+                            <hr class="d-none d-lg-block mb-0 ms-0" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

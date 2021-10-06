@@ -1,0 +1,64 @@
+{% extends 'presentation/base.html' %}
+
+{% block content %}
+{% load static %}
+{% if title %}
+    <head>
+        <title>{{ title }}</title>
+    </head>
+{% else %}
+    <head>
+        <title>L'Atelier Arts et Forme</title>
+    </head>
+{% endif %}
+<section class="presentation-section" >
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5">
+            <div class="col-md-10 col-lg-8 mx-auto text-center">
+                <h2 class="text-white mb-5">Contactez nous !</h2>
+            </div>
+            <iframe class="img" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1025.0644341171187!2d5.573310617291053!3d43.3912395267084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c999cddc6ec63b%3A0xfde729463b0963cf!2sL&#39;Atelier%20Arts%20et%20Forme!5e0!3m2!1sfr!2sfr!4v1632836598205!5m2!1sfr!2sfr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+    <br>
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5">
+            <div class="col-md-4 mb-md-0">
+                <div class="card py-4">
+                    <div class="card-body text-center">
+                        <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                        <h4 class="text-uppercase m-0">Addresse</h4>
+                        <hr class="my-4 mx-auto" />
+                        <div class="small text-black-50">L'Atelier Arts et Forme - Les Sources de La Vie - Peypin</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-md-0">
+                <div class="card py-4 ">
+                    <div class="card-body text-center">
+                        <i class="fas fa-envelope text-primary mb-2"></i>
+                        <h4 class="text-uppercase m-0">Email</h4>
+                        <hr class="my-4 mx-auto" />
+                        <div class="small text-black-50"><a href="#!">informations@latelierartsetforme.fr</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-md-0">
+                <div class="card py-4">
+                    <div class="card-body text-center">
+                        <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                        <h4 class="text-uppercase m-0">Telephone</h4>
+                        <hr class="my-4 mx-auto" />
+                        <div class="small text-black-50">+33 681 468 430</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="social d-flex justify-content-center">
+            <a class="mx-2" href="#!"><i class="fab fa-instagram"></i></a>
+            <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

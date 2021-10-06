@@ -1,0 +1,81 @@
+{% extends 'presentation/base.html' %}
+
+{% block content %}
+{% load static %}
+{% if title %}
+    <head>
+        <title>{{ title }}</title>
+    </head>
+{% else %}
+    <head>
+        <title>L'Atelier Arts et Forme</title>
+    </head>
+{% endif %}
+<section class="presentation-section">
+    <div class="container px-4 px-lg-5">
+    
+        <div class='row mt-4 justify-content-center'>
+            <div class="card col-md-8 mb-lg-4">
+                <div class="card-body">
+                    <h5 class="card-title">Stéphanie</h5>
+                    <img class="image-crop float-left" src="{% static 'assets/img/stephanie_pp.png' %}" alt="template">
+                    <h5 class="card-subtitle mb-2 text-muted">Ragga - Hip Hop</h5>
+                    <p class="card-text pers-justified">Diplômée d'un CQP ALS AGEE artiste chorégraphique, chanteuse, danseuse.
+                        Ma priorité : Partager. Partager mon expérience lors de cours de 1 à 1h30 ( selon la tranche d'âge). Et transmettre l'esprit d'équipe , la cohésion, la coordination, la maîtrise du rapport musique mouvement au travers de rythmes divers et variés inspirés des tendances actuelles et de mon parcours: Championnats du monde, tournage de clip,  nombreuses scènes et divers stages.
+                    </p>
+                </div>
+            </div>
+            <div class="card col-md-8 mb-lg-4">
+                <div class="card-body">
+                    <h5 class="card-title">Nadine</h5>
+                    <img class="image-crop float-left" src="{% static 'assets/img/nadine_pp.png' %}" alt="template">
+                    <h5 class="card-subtitle mb-2 text-muted">Classique, Jazz & Stretch</h5>
+                    <p class="card-text pers-justified">Lorsque l’on me demandait, étant petite, « Que veux-tu faire quand tu seras grande ? », 
+                        j’ai toujours répondu : « Je veux danser ! ». Plus tard, après mes études au conservatoire de Metz, 
+                        après ma médaille d’or, me voilà professeur diplômée d’Etat !
+                        Transmettre est le maître mot de ma carrière, toujours avec passion et bienveillance.
+                        Depuis 15 ans, je suis la directrice de l’Atelier Arts et Forme et veille, depuis ces années, 
+                        que vous vous sentiez chez nous … comme chez vous !
+                        </p>
+                </div>
+            </div>
+            <div class="card col-md-8 mb-lg-4">
+                <div class="card-body">
+                    <h5 class="card-title">Lara</h5>
+                    <img class="image-crop float-left" src="{% static 'assets/img/lara_pp.png' %}" alt="template">
+                    <h5 class="card-subtitle mb-2 text-muted">Yoga</h5>
+                    <p class="card-text pers-justified">Je pratique la danse depuis mon plus jeune âge, je me forme en Italie dans
+                        plusieurs styles de danse et je commence à travailler en tant que danseuse depuis l'âge de 18 ans et depuis je voyage pour le monde.
+                        J'ai découvert le yoga vinyasa en 2014 à Abu Dhabi (Emirates Arabes) je me suis vite rendue compte que cette discipline à laquelle 
+                        je me suis intéressée pour entretenir ma souplesse, apportait bien plus, que ce soit au niveau psychologique, bien-être/détente/relaxation ou au niveau énergétique.
+                        Aujourd'hui je partage avec mes élèves cette merveilleuse discipline avec tous ses bienfaits. </p>
+                </div>
+            </div>
+            <div class="card col-md-8 mb-lg-4">
+                <div class="card-body">
+                    <h5 class="card-title">Meslissa</h5>
+                    <img class="image-crop float-left" src="{% static 'assets/img/melissa_pp.png' %}" alt="template">
+                    <h5 class="card-subtitle mb-2 text-muted">Zumba & Shuffle</h5>
+                    <p class="card-text pers-justified">Bonjour, je suis Melissa, Professeur chez l’ Atelier Arts et Forme depuis 2012. J’y Exerce la Zumba, Le Fitness et le Le Shuffle. 
+                        Ayant une double carrière, je me sert de l’Energie de la Danse, de la Scène et des Voyages pour offrir à mes élèves les Cours les plus complets possible.
+                        L’Energie et la Bonne Humeur sont définitivement les Maitres mots de nos Cours chez L’Atelier Arts et Forme.
+                        </p>
+                </div>
+            </div>
+            <div class="card col-md-8 mb-lg-4">
+                <div class="card-body">
+                    <h5 class="card-title">Sebastien</h5>
+                    <img class="image-crop float-left" src="{% static 'assets/img/sebastien_pp.png' %}" alt="template">
+                    <h5 class="card-subtitle mb-2 text-muted">Hip-Hop</h5>
+                    <p class="card-text pers-justified">D'abord danseur dans plusieurs troupes de la région aixoise, je commence à donner des cours de hip hop au début des années 2000. 
+                        Convaincu de l'utilité d'une formation continue, j'effectue de nombreux stages auprès de chorégraphes français et internationaux comme Guillaume Lorentz, 
+                        Laure Courtellemont, Jawn Ha, puis j'acquiers des compétences en dancehall auprès de Camron 1Shot, Global Bob, Blacka Di Danca, 
+                        Lil'GBB, Orville Hall...J'ai eu la chance de moi même former des danseuses et danseurs au Pavillon noir d'Aix en Provence et au conservatoire de danse de Marignane.
+                         J'exerce maintenant à Aix et dans les villages alentour pour tous publics, des maternels aux seniors.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content%}

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+    <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <title>{{ nl_title }}</title>
+    </head>
+    <body>
+        <div class="container px-4 px-lg-5">
+            <div class='row justify-content-center'>
+                <div class="col-md-8 lg-4 bg-dark rounded">
+                    <h1 class="text-center"> <a class="text-light" href="http://google.com" target="_blank" style="text-decoration: none;">L'Atelier Arts & Forme</a></h1>
+                </div>
+                <div class="card col-md-8 mb-1 lg-4">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ subject_1 }}</h5>
+                        {% if image_src_1 is not None %}
+                            <img style="display: block; position: relative; width: 300px; height: 300px; padding:10px; margin: 0 auto; overflow: hidden;" class="float-left rounded" src="{{ image_src_1.url }}" alt="image1">
+                        {% endif %}
+                        <p class="card-text" style="text-align: justify; -moz-text-align-last: left;text-align-last: left;">
+                            {{ message_body_1 }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container px-4 px-lg-5">
+            <div class='row mt-4 justify-content-center'>
+                {% if message_body_2 is not None %}
+                    <div class="card col-md-8 lg-4">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ subject_2 }}</h5>
+                            {% if image_src_2 is not None %}
+                                <img style="display: block; position: relative; width: 300px; height: 300px; padding:10px; margin: 0 auto; overflow: hidden;" class="float-left rounded" src="{{ image_src_2.url }}" alt="image2">
+                            {% endif %}                        
+                            <div class="card-text" style="text-align: justify; -moz-text-align-last: left;text-align-last: left;">
+                                {{ message_body_2 }}
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+                <div class="col-md-8 lg-4 bg-dark rounded">
+                    <h6 class="text-center"><a class="text-light" href="#" target="_blank" style="text-decoration: none;">Vous recevez ce mail car vous vous êtes inscrit à la Newsletter de l'Atelier Arts et forme. Pour modifier vos preferences, cliquez sur ce texte.</a></h6>
+                </div>
+            </div>
+        </div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>

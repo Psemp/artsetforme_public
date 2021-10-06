@@ -1,0 +1,33 @@
+{% extends 'presentation/base.html' %}
+
+{% block content %}
+{% load static %}
+{% if title %}
+    <head>
+        <title>{{ title }}</title>
+    </head>
+{% else %}
+    <head>
+        <title>L'Atelier Arts et Forme</title>
+    </head>
+{% endif %}
+<section class="presentation-section">
+    <div class="row justify-content-center">
+        <!-- planning -->
+        <div class="col-md-8">
+            <div class="embed-responsive">
+                <iframe class="rounded" src="{% static 'assets/img/planning_21_22.pdf' %}" width="100%" height="500px"></iframe>
+            </div>
+        </div>
+        <!-- tarifs -->
+        <br>
+        <hr>
+        <br>
+        <div class="col-md-8">
+            <div class="embed-responsive">
+                <iframe class="rounded" src="{% static 'assets/img/tarifs_2021.pdf' %}" width="100%" height="500px"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content%}

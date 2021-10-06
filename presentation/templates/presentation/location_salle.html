@@ -1,0 +1,35 @@
+{% extends 'presentation/base.html' %}
+
+{% block content %}
+{% load static %}
+{% if title %}
+    <head>
+        <title>{{ title }}</title>
+    </head>
+{% else %}
+    <head>
+        <title>L'Atelier Arts et Forme</title>
+    </head>
+{% endif %}
+<section class="presentation-section">
+    <div class="row justify-content-center">
+        <div class="col-md-8 bg-light rounded">
+            <u><h2>Nos locaux</h2></u>
+            <h5>Location de salle : se renseigner auprès de Nadine (06 81 46 84 30)</h5>
+            <p>
+            <strong>L’Atelier Arts & Forme est doté de 2 espaces :</strong>
+            <br>
+            <hr>
+            <strong><u>Salle 1</u></strong>
+                Salle de danse de 80 m2, climatisée, équipée d’un véritable plancher posé sur doubles lambourdes pour 
+                protéger vos articulations, de miroirs, de barres et d’une sono.
+            <br>
+            <hr>
+            <strong>Salle2</strong>
+                Salle de 40 m2, avec plancher, est destinée aux cours de « bien-être » par exemple, cours de sophrologie, 
+                de séances de massages, de dessin ...ou même, idéale pour vos réunions.
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock content%}
