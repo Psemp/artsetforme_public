@@ -24,7 +24,7 @@ def send_notification(sender, instance, created, **kwargs):
             subject=f"Nouveau post dans la catégorie{instance.category}",
             from_email="latelier-artsetforme@gmail.com",
             bcc=mailing_list,
-            message=message_html,
+            body=message_html,
         )
         notification.content_subtype = "html"
         notification.send()
