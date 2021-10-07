@@ -44,12 +44,20 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Application definition
 
-SECRET_KEY = 'django-insecure-yjhfiu0r&a*z=em@m)95zlxouo(#9x7g!&fp=0jty28til(hp!'
+if os.environ.get("AEF_ENVIRO") == 'development':
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+    SECRET_KEY = 'django-insecure-yjhfiu0r&a*z=em@m)95zlxouo(#9x7g!&fp=0jty28til(hp!'
 
-ALLOWED_HOSTS = []
+    # SECURITY WARNING: don't run with debug turned on in production!
+    DEBUG = True
+
+    ALLOWED_HOSTS = []
+
+elif os.environ.get("AEF_ENVIRO") == 'production':
+    SECRET_KEY = os.environ.get('AEF_SECRET_KEY')
+    DEBUG = False
+
+    ALLOWED_HOSTS = ['127.0.0.1']
 
 
 INSTALLED_APPS = [
@@ -106,16 +114,8 @@ WSGI_APPLICATION = 'artsetforme.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'artsetforme_test',
-        'USER': 'postgres',
-        'PASSWORD': 'guest',
-        'HOST': '',
-        'PORT': '5433',
-    }
-}
+
+DATABASE_URL = os.environ.get('AEF_DATABASE_URL')
 
 
 # Password validation
