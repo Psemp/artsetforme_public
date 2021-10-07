@@ -35,3 +35,23 @@ def rental(request):
 
 def legal(request):
     return render(request, 'presentation/legal.html', context={'title': "Mentions Légales"})
+
+
+def error_404(request, exception):
+    context = {}
+    return render(request, 'presentation/404.html', context)
+
+
+def error_500(request):
+    context = {}
+    return render(request, 'presentation/500.html', context)
+
+
+def error_403(request, exception):
+    context = {}
+    return render(request, 'presentation/403.html', context)
+
+
+def error_400(request, exception):
+    context = {}
+    return render(request, 'presentation/400.html', context)

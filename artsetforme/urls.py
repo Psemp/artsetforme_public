@@ -62,5 +62,13 @@ urlpatterns = [
     path('register/', user_views.register, name='register'),
 ]
 
+handler404 = pres_views.error_404
+
+handler500 = pres_views.error_500
+
+handler403 = pres_views.error_403
+
+handler400 = pres_views.error_400
+
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
