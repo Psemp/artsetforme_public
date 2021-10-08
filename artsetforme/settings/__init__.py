@@ -57,7 +57,7 @@ elif os.environ.get("AEF_ENVIRO") == 'production':
     SECRET_KEY = os.environ.get('AEF_SECRET_KEY')
     DEBUG = False
 
-    ALLOWED_HOSTS = ['127.0.0.1']
+    ALLOWED_HOSTS = ['*']
 
 
 INSTALLED_APPS = [
@@ -115,7 +115,16 @@ WSGI_APPLICATION = 'artsetforme.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 
-DATABASE_URL = os.environ.get('AEF_DATABASE_URL')
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get("AEF_DB"),
+        'USER': os.environ.get("PG_USER"),
+        'PASSWORD': os.environ.get("PG_PWD"),
+        'HOST': os.environ.get("AEF_HOST"),
+        'PORT': os.environ.get("AEF_DB_PORT"),
+    }
+}
 
 
 # Password validation

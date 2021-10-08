@@ -1,7 +1,0 @@
-.dockerignore
-Dockerfile
-.vscode
-*LICENSE*
-README.md
-env
-.coverage
