@@ -1,5 +1,6 @@
 # Test folder for download_test
 ./test_data/*
+test_data/
 
 .coverage
 .DS_Store

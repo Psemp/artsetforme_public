@@ -95,7 +95,7 @@ body {
 #filter-form{
   margin-top: 5rem !important;
   padding-top: 2rem !important;
-  position: relative;
+  position: fixed !important;
 }
 
 .float-left {
@@ -113,8 +113,6 @@ body {
   -moz-text-align-last: left;
   text-align-last: left;
 }
-
-
 
 .dropdown-submenu {
   display: none;
@@ -11625,7 +11623,7 @@ body {
 }
 
 .user-section {
-  position: absolute;
+  position: relative;
   width: 100%;
   padding: 12rem 0;
   background-image: url("../assets/img/user_bg.jpg");
@@ -11640,7 +11638,7 @@ body {
   position: relative;
   width: 100%;
   min-height: 90vh;
-  padding: 2rem 0;
+  padding: 7rem 0;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/bg-masthead.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -11648,30 +11646,11 @@ body {
   background-size: cover;
 }
 
-.presentation-section{
-  position: relative;
-  width: 100%;
-  min-height: 90vh;
-  padding: 5rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/bg-masthead.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment:fixed;
-  background-size: cover;
+#register-section{
+  padding: 4rem !important;
+  padding-right: 10%;
+  padding-left: 10%;
 }
-
-.user-section{
-  position: relative;
-  width: 100%;
-  min-height: 90vh;
-  padding: 5rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/user_bg.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment:fixed;
-  background-size: cover;
-}
-
 
 .blogpost{
   text-justify: auto;
