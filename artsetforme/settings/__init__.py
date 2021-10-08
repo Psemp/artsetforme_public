@@ -51,7 +51,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 INSTALLED_APPS = [
     'download.apps.DownloadConfig',
     'presentation.apps.PresentationConfig',
@@ -106,14 +105,15 @@ WSGI_APPLICATION = 'artsetforme.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'artsetforme_test',
-        'USER': 'postgres',
-        'PASSWORD': 'guest',
-        'HOST': '',
-        'PORT': '5433',
+        'NAME': os.environ.get("AEF_DB"),
+        'USER': os.environ.get("PG_USER"),
+        'PASSWORD': os.environ.get("PG_PWD"),
+        'HOST': os.environ.get("AEF_HOST"),
+        'PORT': os.environ.get("AEF_DB_PORT"),
     }
 }
 
