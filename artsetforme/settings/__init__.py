@@ -44,7 +44,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Application definition
 
-if os.environ.get("AEF_ENVIRO") == 'development':
+if os.environ.get("AEF_ENVIRO") != 'production':
 
     SECRET_KEY = 'django-insecure-yjhfiu0r&a*z=em@m)95zlxouo(#9x7g!&fp=0jty28til(hp!'
 
