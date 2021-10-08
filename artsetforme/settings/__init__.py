@@ -44,21 +44,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Application definition
 
-if os.environ.get("AEF_ENVIRO") != 'production':
+SECRET_KEY = 'django-insecure-yjhfiu0r&a*z=em@m)95zlxouo(#9x7g!&fp=0jty28til(hp!'
 
-    SECRET_KEY = 'django-insecure-yjhfiu0r&a*z=em@m)95zlxouo(#9x7g!&fp=0jty28til(hp!'
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
 
-    # SECURITY WARNING: don't run with debug turned on in production!
-    DEBUG = True
-
-    ALLOWED_HOSTS = []
-
-elif os.environ.get("AEF_ENVIRO") == 'production':
-    SECRET_KEY = os.environ.get('AEF_SECRET_KEY')
-    DEBUG = False
-
-    ALLOWED_HOSTS = ['*']
-
+ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'download.apps.DownloadConfig',
