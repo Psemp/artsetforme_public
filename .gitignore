@@ -1,3 +1,7 @@
+# Production files
+
+artsetforme/settings/production.py
+
 # Test folder for download_test
 ./test_data/*
 test_data/
