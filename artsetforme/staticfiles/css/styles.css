@@ -11554,15 +11554,15 @@ body {
   }
   #mainNav .navbar-brand {
     padding: 0.5rem 0;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255);
   }
   #mainNav .nav-link {
     transition: none;
     padding: 1.2rem 1rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.9);
   }
   #mainNav .nav-link:hover {
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255);
   }
   #mainNav .nav-link:active {
     color: #fff;
