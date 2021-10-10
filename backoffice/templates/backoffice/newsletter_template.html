@@ -12,21 +12,18 @@
     </head>
     <body>
         <div class="container px-4 px-lg-5">
-            <div class='row justify-content-center'>
-                <div class="col-md-8 lg-4 bg-dark rounded">
-                    <h1 class="text-center"> <a class="text-light" href="http://google.com" target="_blank" style="text-decoration: none;">L'Atelier Arts & Forme</a></h1>
-                <div class="card col-md-8 mb-1 lg-4">
+            <h1 class="text-center"> <a class="text-dark" href="http://latelier-artsetforme.fr" target="_blank" style="text-decoration: none;">L'Atelier Arts et Forme</a></h1>
+            <div class='row mt-4 justify-content-center'>
+                {% if message_body_1 is not None %}
+                    <div class="card col-md-8 lg-4">
                         <div class="card-body">
-                            <h5 class="card-title">{{ subject_1 }}</h5>
-                            {% if image_src_1 is not None %}
-                                <img style="display: block; position: relative; width: 300px; height: 300px; padding:10px; margin: 0 auto; overflow: hidden;" class="float-left rounded" src="{{ image_src_1.url }}" alt="image1">
-                            {% endif %}
-                            <p class="card-text" style="text-align: justify; -moz-text-align-last: left;text-align-last: left;">
+                            <h5 class="card-title">{{ subject_1 }}</h5>                   
+                            <div class="card-text" style="text-align: justify; -moz-text-align-last: left;text-align-last: left;">
                                 {{ message_body_1 }}
-                            </p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                {% endif %}
             </div>
         </div>
         <div class="container px-4 px-lg-5">
@@ -34,10 +31,7 @@
                 {% if message_body_2 is not None %}
                     <div class="card col-md-8 lg-4">
                         <div class="card-body">
-                            <h5 class="card-title">{{ subject_2 }}</h5>
-                            {% if image_src_2 is not None %}
-                                <img style="display: block; position: relative; width: 300px; height: 300px; padding:10px; margin: 0 auto; overflow: hidden;" class="float-left rounded" src="{{ image_src_2.url }}" alt="image2">
-                            {% endif %}                        
+                            <h5 class="card-title">{{ subject_2 }}</h5>                   
                             <div class="card-text" style="text-align: justify; -moz-text-align-last: left;text-align-last: left;">
                                 {{ message_body_2 }}
                             </div>

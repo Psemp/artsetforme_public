@@ -15,28 +15,19 @@ def send_newsletter(sender, instance, created, **kwargs):
         context = {
             "nl_title": nl_content['nl_title'],
             "subject_1": nl_content['subject_1'],
-            "image_1_src": nl_content['image_1_src'],
             "message_body_1": nl_content['message_body_1'],
             "subject_2": nl_content['subject_2'],
-            "image_2_src": nl_content['image_2_src'],
             "message_body_2": nl_content['message_body_2'],
         }
         message_html = render_to_string('backoffice/newsletter_template.html', context)
         mailing_list = get_mailing_list(nl_content['target'].pk)
-        if not instance.attachment:
-            email = EmailMessage(
-                    subject=nl_content['nl_title'],
-                    body=message_html,
-                    from_email="latelier-artsetforme@gmail.com",
-                    bcc=mailing_list,
-                )
-        elif instance.attachment:
-            email = EmailMessage(
-                    subject=nl_content['nl_title'],
-                    body=message_html,
-                    from_email="latelier-artsetforme@gmail.com",
-                    bcc=mailing_list,
-                    attachments=instance.attachment
-                )
+
+        email = EmailMessage(
+                subject=nl_content['nl_title'],
+                body=message_html,
+                from_email="latelier-artsetforme@gmail.com",
+                bcc=mailing_list,
+            )
         email.content_subtype = "html"
+
         email.send()
