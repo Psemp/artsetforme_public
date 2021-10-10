@@ -2,6 +2,9 @@
 
 artsetforme/settings/production.py
 
+# Do not version media / newsletter
+artsetforme/media/newsletter_files/*
+
 # Test folder for download_test
 ./test_data/*
 test_data/
