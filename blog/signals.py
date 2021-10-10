@@ -19,7 +19,7 @@ def send_notification(sender, instance, created, **kwargs):
             "title": instance.title,
             "category": instance.category,
         }
-        message_html = render_to_string('backoffice/newsletter_template.html', context)
+        message_html = render_to_string('blog/notification_template.html', context)
         notification = EmailMessage(
             subject=f"Nouveau post dans la catégorie{instance.category}",
             from_email="latelier-artsetforme@gmail.com",
