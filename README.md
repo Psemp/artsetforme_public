@@ -31,7 +31,7 @@ The web app has 3 main functions :
 
 1. Requires : Python3 (built with 3.8 and 3.9, should work well with later versions, unsure about earlier versions) ; PostgreSQL (here : ver.13), pip
 2. Optionnal --> Create a virtual env using the tool of your choice `pip install -r requirements.txt` to install the dependencies
-3. Set env variables, either with dotenv (not used in the project so you'll need to tinker the code a bit) - Needed in settings : **email backend** `AEF_EMAIL_USER` , `AEF_EMAIL_PASSWORD` < Credentials to log in on an adress mail, here gmail is used. **DATABASES** : `AEF_DB`, the database name ; `PG_USER` and `PG_PWD` the credentials of the database user , `AEF_DB_PORT` and `AEF_ENVIRO`, the last one specifies *development* or *production*
+3. Set env variables, either with dotenv or not(not used in the project so you'll need to tinker the code a bit) - Needed in settings : **email backend** `AEF_EMAIL_USER` , `AEF_EMAIL_PASSWORD` < Credentials to log in on an adress mail, here gmail is used. **DATABASES** : `AEF_DB`, the database name ; `PG_USER` and `PG_PWD` the credentials of the database user , `AEF_DB_PORT` and `AEF_ENVIRO`, the last one specifies *development* or *production*
 4. execute : `python manage.py makemigrations` and `python manage.py migrate` to create the tables of the database and establish the relationships
 5. execute : `python manage.py createsuperuser` and create a superuser
 6. execute `python manage.py runserver` to run it locally in development
