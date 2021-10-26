@@ -24,7 +24,9 @@ The web app has 3 main functions :
 <br>
 * A newsletter app that lets editor(s) send an email to users subscribed to a category. In this version, AEF chose not to include attachments or images which simplifies the app but those parts are commented out, not deleted IIRC
 <br>
+
 --
+
 ### Installation
 
 1. Requires : Python3 (built with 3.8 and 3.9, should work well with later versions, unsure about earlier versions) ; PostgreSQL (here : ver.13), pip
