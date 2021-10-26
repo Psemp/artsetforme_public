@@ -21,8 +21,9 @@ The web app has 3 main functions :
 * A presentation app, which highlights the aspects of AEF and the main informations (who/what/why/where)
 <br>
 * A blog app, which lets editor post blogposts, preferably in editor created categories. This has several advantages : the user can filter which category he wants to see, and AEF can notify every person subscribed to a category that a post has been made on the website
+<br>
 * A newsletter app that lets editor(s) send an email to users subscribed to a category. In this version, AEF chose not to include attachments or images which simplifies the app but those parts are commented out, not deleted IIRC
-
+<br>
 --
 ### Installation
 
