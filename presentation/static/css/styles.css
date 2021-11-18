@@ -5060,7 +5060,7 @@ textarea.form-control-lg {
 }
 
 .alert {
-  position:fixed;
+  position:relative;
   padding: 1rem 1rem;
   margin-bottom: 1rem;
   margin-top: 5rem;
