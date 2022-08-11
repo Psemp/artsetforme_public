@@ -27,4 +27,4 @@ def send_notification(sender, instance, created, **kwargs):
             body=message_html,
         )
         notification.content_subtype = "html"
-        notification.send(fail_silently=True)
+        notification.send()
