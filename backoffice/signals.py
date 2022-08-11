@@ -30,4 +30,4 @@ def send_newsletter(sender, instance, created, **kwargs):
             )
         email.content_subtype = "html"
 
-        email.send()
+        email.send(fail_silently=True)
