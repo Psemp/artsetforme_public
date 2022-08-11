@@ -22,7 +22,7 @@ def send_notification(sender, instance, created, **kwargs):
         message_html = render_to_string('blog/notification_template.html', context)
         notification = EmailMessage(
             subject=f"Nouveau post dans la catégorie{instance.category}",
-            from_email="latelier-artsetforme@gmail.com",
+            from_email="latelier-artsetfore@gmail.com",
             bcc=mailing_list,
             body=message_html,
         )
