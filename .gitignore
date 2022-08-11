@@ -6,6 +6,7 @@ artsetforme/settings/production.py
 artsetforme/media/newsletter_files/*
 artsetforme/media/*
 
+
 # Test folder for download_test
 ./test_data/*
 test_data/
