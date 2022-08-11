@@ -717,7 +717,7 @@ progress {
 }
 .row {
   --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 0;
+  --bs-gutter-y: 0.5rem;
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(var(--bs-gutter-y) * -1);
@@ -5060,7 +5060,7 @@ textarea.form-control-lg {
 }
 
 .alert {
-  position:relative;
+  position:fixed;
   padding: 1rem 1rem;
   margin-bottom: 1rem;
   margin-top: 5rem;
