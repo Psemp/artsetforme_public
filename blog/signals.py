@@ -7,7 +7,7 @@ from .models import Blogpost
 from backoffice.script.get_mailing_list import get_mailing_list
 
 
-@receiver(post_save, sender=Blogpost)
+#  @receiver(post_save, sender=Blogpost)
 def send_notification(sender, instance, created, **kwargs):
     """This signal detects if a new post is created, fetches the
     relevant mailing list and sends mass mail to subscribed users"""
