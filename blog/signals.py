@@ -28,4 +28,3 @@ def send_notification(sender, instance, created, **kwargs):
         )
         notification.content_subtype = "html"
         notification.send(fail_silently=True)
-

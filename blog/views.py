@@ -10,5 +10,5 @@ class BlogpostListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['filter'] = BlogpostFilter(self.request.GET, queryset=self.get_queryset())
+        context['filter'] = BlogpostFilter(self.request.GET, queryset=self.get_queryset().order_by('-date_posted'))
         return context
