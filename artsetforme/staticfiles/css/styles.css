@@ -114,7 +114,12 @@ body {
   text-align-last: left;
 }
 
-
+.pers-justified-doc {
+  text-align: justify;
+  -moz-text-align-last: left;
+  text-align-last: left;
+  margin-bottom: 1rem !important;
+}
 
 .dropdown-submenu {
   display: none;
