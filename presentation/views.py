@@ -9,10 +9,6 @@ def contact(request):
     return render(request, 'presentation/contact.html', context={'title': "Nous Contacter"})
 
 
-def covidinfo(request):
-    return render(request, 'presentation/covidinfo.html', context={'title': "Arts Et Forme - COVID19"})
-
-
 def stages(request):
     return render(request, 'presentation/stages.html', context={'title': "Nos Stages"})
 
