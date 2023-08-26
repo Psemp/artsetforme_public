@@ -93,6 +93,30 @@
         {% endfor %}
         {% block content %}
         {% endblock content %}
+        <!-- Cookies -->
+        <div class="cookie-banner container px-4 px-lg-5" id="cookie-banner">
+            <div class="cookie-message text-center">
+                Nous utilisons des cookies fonctionnels pour garantir le bon fonctionnement de notre site web.
+                <button class="close-banner btn btn-secondary" id="close-cookie-banner">J'ai compris !</button>
+            </div>
+        </div>
+        <!-- Inline Script for Cookie Banner Behavior -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var cookieBanner = document.getElementById("cookie-banner");
+                var closeButton = document.getElementById("close-cookie-banner");
+                
+                // Check if user has acknowledged the banner
+                if (localStorage.getItem('cookieBannerAcknowledged') === 'true') {
+                    cookieBanner.style.display = "none";
+                }
+                
+                closeButton.addEventListener("click", function() {
+                    cookieBanner.style.display = "none";
+                    localStorage.setItem('cookieBannerAcknowledged', 'true');
+                });
+            });
+            </script>
         <!-- Footer-->
         <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5"> <a href="https://github.com/Psemp/artsetforme_public/blob/main/LICENSE" target="_blank">Copyright &copy;</a> | <a href="https://github.com/Psemp" target="_blank">Pierre Sempéré</a>  2023| <a href="mailto:pierre.sempere.01@gmail.com">email</a> |  <a href="{% url 'mentions-legales' %}">Mentions Légales</a></div></footer>
         <!-- Bootstrap core JS-->
