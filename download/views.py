@@ -7,6 +7,9 @@ def documents(request):
     download_links = []
     for item in file_list:
         download_links.append(item)
+
+    download_links.reverse()
+
     context = {
         "title": "Téléchargements",
         "download_links": download_links
