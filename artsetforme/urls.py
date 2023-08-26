@@ -30,7 +30,6 @@ urlpatterns = [
     path('', pres_views.index, name='index'),
     path('contact/', pres_views.contact, name='contact'),
     path('mentions-legales/', pres_views.legal, name='mentions-legales'),
-    path('infocovid/', pres_views.covidinfo, name='infocovid'),
     path('equipe/', pres_views.team, name='equipe'),
     path('stages/', pres_views.stages, name='stages'),
     path('documents/', download_views.documents, name='documents'),

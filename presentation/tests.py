@@ -18,14 +18,6 @@ class ContactPageTestCase(TestCase):
         self.assertEqual(response.status_code, 200)
 
 
-class CovidinfoPageTestCase(TestCase):
-
-    # test that covidinfo (named infocovid in url ... idk why) returns a 200
-    def test_infocovid_page(self):
-        response = self.client.get(reverse('infocovid'))
-        self.assertEqual(response.status_code, 200)
-
-
 class StagesPageTestCase(TestCase):
 
     # test that stages returns a 200
