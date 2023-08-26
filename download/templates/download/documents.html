@@ -21,7 +21,8 @@
         </div>
         <hr>
         <br>
-            {% for item in download_links %}
+            <!-- Displays recent first -->
+            {% for item in download_links.reverse() %}
                 <div class="card col-md-8 mb-lg-4">
                     <div class="card-body">
                         <h5 class="card-title">{{ item.name }}</h5>
