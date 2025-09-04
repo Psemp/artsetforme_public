@@ -55,7 +55,7 @@
                               <li><a class="dropdown-item" href="{% url 'equipe' %}">Notre Équipe</a></li>
                               <li><a class="dropdown-item" href="{% url 'planning-et-tarifs' %}">Planning et Tarifs</a></li>
                               <li><a class="dropdown-item" href="{% url 'stages' %}">Nos Stages</a></li>
-                              <li><a class="dropdown-item" href="{% url 'documents' %}">Telechargez nos documents</a></li>
+                              <li><a class="dropdown-item" href="{% url 'documents' %}">Téléchargez nos documents</a></li>
                               <li><a class="dropdown-item" href="{% url 'location_salle' %}">Location salle</a></li>
                             </ul>
                           </div>
@@ -73,7 +73,7 @@
         {% block content %}
         {% endblock content %}
         <!-- Cookies -->
-        <div class="cookie-banner container px-4 px-lg-5" id="cookie-banner">
+        <div class="cookie-banner w-100 text-center bg-light text-muted py-3 shadow-sm" id="cookie-banner">
             <div class="cookie-message text-center">
                 Nous utilisons des cookies fonctionnels pour garantir le bon fonctionnement de notre site web.
                 <button class="close-banner btn btn-secondary" id="close-cookie-banner">J'ai compris !</button>
@@ -95,7 +95,7 @@
                     localStorage.setItem('cookieBannerAcknowledged', 'true');
                 });
             });
-            </script>
+        </script>
         <!-- Footer-->
         <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5"> <a href="https://github.com/Psemp/artsetforme_public/blob/main/LICENSE" target="_blank">Copyright &copy;</a> | <a href="https://github.com/Psemp" target="_blank">Pierre Sempéré</a>  2025| <a href="mailto:pierre.sempere.pro@gmail.com">email</a> |  <a href="{% url 'mentions-legales' %}">Mentions Légales</a></div></footer>
         <!-- Bootstrap core JS-->
