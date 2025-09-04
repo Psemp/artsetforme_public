@@ -1,5 +1,4 @@
 from django.test import TestCase
-from .signals import send_newsletter
 from .models import Newsletter, Topic
 from .script import get_mailing_list
 from user.models import Profile

@@ -15,12 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.contrib.auth import views as auth_views
 from django.conf.urls.static import static
 from django.conf import settings
 from presentation import views as pres_views
 from download import views as download_views
-from user import views as user_views
 
 
 urlpatterns = [
@@ -35,30 +33,7 @@ urlpatterns = [
     path('documents/', download_views.documents, name='documents'),
     path('medias/', pres_views.medias, name='medias'),
     path('planning-et-tarifs/', pres_views.planning, name='planning-et-tarifs'),
-    path('login/', auth_views.LoginView.as_view(template_name='user/login.html'), name='login'),
-    path('logout/', auth_views.LogoutView.as_view(template_name='user/logout.html'), name='logout'),
-    path('password-reset/', auth_views.PasswordResetView.as_view(
-        template_name='user/password_reset.html'),
-        name='password_reset'
-    ),
-    path('password-reset/done', auth_views.PasswordResetDoneView.as_view(
-        template_name='user/password_reset_done.html'),
-        name='password_reset_done'
-    ),
-    path('password-reset-confirm/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(
-        template_name='user/password_reset_confirm.html'),
-        name='password_reset_confirm'
-    ),
-    path('password-reset-complete/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(
-        template_name='user/password_reset_confirm.html'),
-        name='password_reset_confirm'
-    ),
-    path('password-reset/complete', auth_views.PasswordResetCompleteView.as_view(
-        template_name='user/password_reset_complete.html'),
-        name='password_reset_complete'
-    ),
-    path('profile/', user_views.profile, name='profile'),
-    path('register/', user_views.register, name='register'),
+    path("robots.txt", pres_views.robots_txt, name="robots_txt"),
 ]
 
 handler404 = pres_views.error_404

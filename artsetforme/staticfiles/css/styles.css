@@ -34,7 +34,7 @@
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
   --bs-primary: #64a19d;
-  --bs-sendary: #7464a1;
+  --bs-secondary: #7464a1;
   --bs-success: #67c29c;
   --bs-info: #1cabc4;
   --bs-warning: #e4c662;
@@ -78,41 +78,6 @@
     scroll-behavior: smooth;
   }
 }
-
-.cookie-banner {
-  width: 100%;
-  background-color: #f5f5f5;
-  padding: 15px 0;
-  text-align: center;
-  border-top: 1px solid #ccc;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 1000;
-}
-
-.cookie-message {
-  display: inline-block;
-  margin: 0 auto;
-  max-width: 80%;
-  text-align: left;
-}
-
-.close-banner {
-  background-color: #333;
-  color: white;
-  border: none;
-  padding: 5px 15px;
-  margin-left: 15px;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.close-banner:hover {
-  background-color: #555;
-}
-
-
 
 body {
   margin: 0;
